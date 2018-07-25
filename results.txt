@@ -1,0 +1,28 @@
+
+
+LOG ANALISYS PROJECT
+
+----------------------------------------------------------
+1st QUERY - 3 most popular articles
+
+"Candidate is jerk, alleges rival"       -    2709176 views
+"Bears love berries, alleges bear"       -    2030408 views
+"Bad things gone, say good people"       -    1360784 views
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+2nd QUERY - Authors of the most popular articles
+
+Ursula La Multa                          -     507594 views
+Rudolf von Treppenwitz                   -     423457 views
+Anonymous Contributor                    -     170098 views
+Markoff Chaney                           -      84557 views
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+3rd QUERY - Days where errors from requests are more the 1%
+
+Jul 17, 2016 - 2.27%
+----------------------------------------------------------
