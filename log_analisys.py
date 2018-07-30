@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/env python3
 
 import psycopg2
 
@@ -6,7 +6,11 @@ import psycopg2
 file = open("results.txt", "w")
 
 # Open connection with database
-conn = psycopg2.connect(dbname="news")
+try:
+    conn = psycopg2.connect(dbname="news")
+except:
+    print("Unable to connect to the database")
+
 cursor = conn.cursor()
 
 file.write("\n\nLOG ANALISYS PROJECT")
@@ -21,7 +25,7 @@ cursor.execute("select articles.title, logs.num_views "
                "(select log.path, "
                "split_part(log.path, '/article/', 2) as slug, "
                "count(*) as num_views "
-               "from log, articles "
+               "from log "
                "where log.status = '200 OK' "
                "and log.path like '/article/%' "
                "group by log.path) as logs "
